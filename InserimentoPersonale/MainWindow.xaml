@@ -43,7 +43,6 @@
             <Button Name="btnPulisci" Content="Pulisci" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" FontSize="18"  Width="130" Height="30"/>
             <Button Name="btnEsci" Content="Esci" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" FontSize="18"  Width="130" Height="30"/>
            
-
         </Grid>
     </StackPanel>
 </Window>
