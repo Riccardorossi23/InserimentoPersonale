@@ -20,9 +20,24 @@ namespace InserimentoPersonale
     /// </summary>
     public partial class Page1 : Page
     {
-        public Page1()
+        private string[] qualifiche = new string[] { "Dirigente", "Quadro", "Ammministrativo", };
+        public PersonaleAziendale pa;
+        public Page1(PersonaleAziendale pa)
         {
+            this.pa = pa;
+        
+       
             InitializeComponent();
+        }
+        private void cmbQualifica_Loaded(object sender, RoutedEventArgs e)
+        {
+            foreach (string s in qualifiche)
+                cmbQualifica.Items.Add(s);
+        }
+
+        private void btnInserisci_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -37,11 +37,11 @@
             <TextBox Name="txtCognome"  Grid.Row="3" Grid.Column="1"  Width="130" VerticalAlignment="Center" HorizontalAlignment="Left"/>
             
             <Label Content="Tipologia:"  Grid.Row="4" Grid.Column="0" FontSize="18" Width="130"  VerticalAlignment="Center" HorizontalAlignment="Right"/>
-            <ComboBox Name="cmbTipologia"  Grid.Row="4" Grid.Column="1" Width="130"  VerticalContentAlignment="Center" HorizontalAlignment="Left"/>
+            <ComboBox Name="cmbTipologia"  Grid.Row="4" Grid.Column="1" Width="130"  VerticalContentAlignment="Center" HorizontalAlignment="Left" SelectionChanged="cmbTipologia_SelectionChanged"/>
             
-            <Button Name="btnInserisci" Content="Inserisci" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"  FontSize="18" Width="130" Height="30"/>
-            <Button Name="btnPulisci" Content="Pulisci" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" FontSize="18"  Width="130" Height="30"/>
-            <Button Name="btnEsci" Content="Esci" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" FontSize="18"  Width="130" Height="30"/>
+            <Button Name="btnInserisci" Content="Inserisci" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"  FontSize="18" Width="130" Height="30" Click="btnInserisci_Click"/>
+            <Button Name="btnPulisci" Content="Pulisci" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" FontSize="18"  Width="130" Height="30" Click="btnPulisci_Click"/>
+            <Button Name="btnEsci" Content="Esci" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" FontSize="18"  Width="130" Height="30" Click="btnEsci_Click"/>
            
         </Grid>
     </StackPanel>
