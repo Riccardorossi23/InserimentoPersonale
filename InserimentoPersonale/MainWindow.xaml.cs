@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ClassPersonale;
 
 namespace InserimentoPersonale
 {
@@ -81,7 +82,21 @@ namespace InserimentoPersonale
                             formAziendale.ShowDialog();
                             codiciEsistenti.Add(pa.CodiceFiscale);
                         }
+                        else
+                        {
+                            MessageBox.Show("IL CODICE FISCALE NON PUÒ ESSERE DUPLICATO, RINSERIRE IL CODICE FISCALE","INFORMAZIONE",MessageBoxButton.OK,MessageBoxImage.Error);
+                        }
                     }
+                    else
+                    {
+                        MessageBox.Show("non sono stati inseriti tutti i dati", "Attezione", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    }
+                    break;
+                case 1:
+                    MessageBox.Show("AREA ANCORA IN ELABORAZIONE","INFORMATION", MessageBoxButton.OK, MessageBoxImage.Information);
+                    break;
+                case 2:
+                    MessageBox.Show("AREA ANCORA IN ELABORAZIONE", "INFORMATION", MessageBoxButton.OK, MessageBoxImage.Information);
                     break;
             }
         }

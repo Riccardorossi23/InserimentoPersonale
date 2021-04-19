@@ -45,11 +45,5 @@
     <Compile Include="PersonaleAziendale.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\InserimentoPersonale\InserimentoPersonale.csproj">
-      <Project>{d0f42579-0b42-47b6-a122-9d4efaa2eb5a}</Project>
-      <Name>InserimentoPersonale</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
