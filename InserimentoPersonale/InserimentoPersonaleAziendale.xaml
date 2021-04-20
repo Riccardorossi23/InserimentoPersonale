@@ -38,7 +38,7 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
             <ListBox x:Name="lbRiepilogo"  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" FontSize="18" Width="530" Height="110" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
             <Button x:Name="btnNuovoInserimento" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Content="Nuovo Inserimento" FontSize="18" Width="170" HorizontalAlignment="Center" Click="btnNuovoInserimento_Click"/>
-            <Button x:Name="btnMostraFile"  Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Content="Mostra File" FontSize="18" Width="170" HorizontalAlignment="Center"/>
+            <Button x:Name="btnMostraFile"  Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Content="Mostra File" FontSize="18" Width="170" HorizontalAlignment="Center" Click="btnMostraFile_Click"/>
             
 
         </Grid>

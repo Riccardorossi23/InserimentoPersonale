@@ -18,7 +18,7 @@ namespace InserimentoPersonale
     /// <summary>
     /// Interaction logic for PersonaleAziendale.xaml
     /// </summary>
-    public partial class PersonaleAziendaleTable : Page
+    public partial class PersonaleAziendaleTable : Window
     {
         public PersonaleAziendaleTable()
         {

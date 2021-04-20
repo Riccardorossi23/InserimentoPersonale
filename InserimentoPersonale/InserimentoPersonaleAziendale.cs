@@ -65,6 +65,11 @@ namespace InserimentoPersonale
             cmbQualifica.SelectedIndex = -1;
             this.Close();
         }
+
+        private void btnMostraFile_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
        
     
