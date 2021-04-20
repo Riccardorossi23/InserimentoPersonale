@@ -1,4 +1,4 @@
-﻿<Page x:Class="InserimentoPersonale.PersonaleAziendale"
+﻿<Page x:Class="InserimentoPersonale.PersonaleAziendaleTable"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -21,19 +21,10 @@
                     <RowDefinition Height="40"/>
                     <RowDefinition Height="40"/>
                 </Grid.RowDefinitions>
-
-     
-                    <Label Content="Tabella Personale Aziendale" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Foreground="Red" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-               
-
-             
-                    <ListBox x:Name="lbMostra" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" FontSize="18" Height="235" Width="700" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-
-
+                <Label Content="Tabella Personale Aziendale" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Foreground="Red" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <ListBox x:Name="lbMostra" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" FontSize="18" Height="235" Width="700" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
                 <Button x:Name="btnIndietro" Content="Indietro" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" FontSize="18" Width="150" HorizontalAlignment="Center"/>
                 <Button x:Name="btnEsci" Content="Esci" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" FontSize="18" Width="150" HorizontalAlignment="Center"/>
-              
-
             </Grid>
         </StackPanel>
     </Grid>

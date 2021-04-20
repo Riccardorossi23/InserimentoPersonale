@@ -1,4 +1,4 @@
-﻿<Window x:Class="InserimentoPersonale.MainWindow"
+﻿<Window x:Class="InserimentoPersonale.Personale"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -37,7 +37,7 @@
             <TextBox Name="txtCognome"  Grid.Row="3" Grid.Column="1"  Width="130" VerticalAlignment="Center" HorizontalAlignment="Left"/>
             
             <Label Content="Tipologia:"  Grid.Row="4" Grid.Column="0" FontSize="18" Width="130"  VerticalAlignment="Center" HorizontalAlignment="Right"/>
-            <ComboBox Name="cmbTipologia"  Grid.Row="4" Grid.Column="1" Width="130"  VerticalContentAlignment="Center" HorizontalAlignment="Left" SelectionChanged="cmbTipologia_SelectionChanged"/>
+            <ComboBox Name="cmbTipologia"  Grid.Row="4" Grid.Column="1" Width="130"  VerticalContentAlignment="Center" HorizontalAlignment="Left" Loaded="cmbTipologia_Loaded" />
             
             <Button Name="btnInserisci" Content="Inserisci" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"  FontSize="18" Width="130" Height="30" Click="btnInserisci_Click"/>
             <Button Name="btnPulisci" Content="Pulisci" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" FontSize="18"  Width="130" Height="30" Click="btnPulisci_Click"/>

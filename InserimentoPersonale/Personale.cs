@@ -20,11 +20,11 @@ namespace InserimentoPersonale
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Personale : Window
     {
         private string[] tipologia = new string[] { "Aziendale", "SubFornitore", "Fornitore", "Consulente" };
         private HashSet<string> codiciEsistenti = new HashSet<string>();
-        public MainWindow()
+        public Personale()
         {
             InitializeComponent();
             LeggiFile();
@@ -55,13 +55,7 @@ namespace InserimentoPersonale
 
         }
 
-        private void cmbTipologia_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            foreach (var tipo in tipologia)
-            {
-                cmbTipologia.Items.Add(tipo);
-            }
-        }
+     
 
         private void btnEsci_Click(object sender, RoutedEventArgs e)
         {
@@ -78,9 +72,13 @@ namespace InserimentoPersonale
                         if (!codiciEsistenti.Contains(txtCodFisc.Text))
                         {
                             PersonaleAziendale pa = new PersonaleAziendale(txtCodFisc.Text, txtNome.Text, txtCognome.Text, cmbTipologia.SelectedItem.ToString());
-                            Page1 formAziendale = new Page1(pa);
+                            InserimentoPersonaleAziendale formAziendale = new InserimentoPersonaleAziendale(pa);
                             formAziendale.ShowDialog();
-                            codiciEsistenti.Add(pa.CodiceFiscale);
+                            codiciEsistenti.Add(pa.Codice_Fiscale);
+                            txtCodFisc.Text = "";
+                            txtCognome.Text = "";
+                            txtNome.Text = "";
+                            cmbTipologia.SelectedIndex = -1;
                         }
                         else
                         {
@@ -98,6 +96,40 @@ namespace InserimentoPersonale
                 case 2:
                     MessageBox.Show("AREA ANCORA IN ELABORAZIONE", "INFORMATION", MessageBoxButton.OK, MessageBoxImage.Information);
                     break;
+
+                case 3:
+                    if (txtCodFisc.Text != "" && txtNome.Text != "" && txtCognome.Text != "" && cmbTipologia.SelectedIndex != -1)
+                    {
+                        if (!codiciEsistenti.Contains(txtCodFisc.Text))
+                        {
+                            PersonaleAziendale pa = new PersonaleAziendale(txtCodFisc.Text, txtNome.Text, txtCognome.Text, cmbTipologia.SelectedItem.ToString());
+                            InserimentoPersonaleAziendale formAziendale = new InserimentoPersonaleAziendale(pa);
+                            formAziendale.ShowDialog();
+                            codiciEsistenti.Add(pa.Codice_Fiscale);
+                            txtCodFisc.Text = "";
+                            txtCognome.Text = "";
+                            txtNome.Text = "";
+                            cmbTipologia.SelectedIndex = -1;
+                        }
+                        else
+                        {
+                            MessageBox.Show("IL CODICE FISCALE NON PUÒ ESSERE DUPLICATO, RINSERIRE IL CODICE FISCALE", "INFORMAZIONE", MessageBoxButton.OK, MessageBoxImage.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("non sono stati inseriti tutti i dati", "Attezione", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    }
+                    break;
+                   
+            }
+        }
+
+        private void cmbTipologia_Loaded(object sender, RoutedEventArgs e)
+        {
+            foreach (var tipo in tipologia)
+            {
+                cmbTipologia.Items.Add(tipo);
             }
         }
     }

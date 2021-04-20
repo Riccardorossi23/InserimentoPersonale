@@ -55,7 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Personale.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -64,25 +64,25 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Constanti.cs" />
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="Personale.cs">
+      <DependentUpon>Personale.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="InserimentoPersonaleAziendale.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PersonaleAziendale.xaml">
+    <Page Include="PersonaleAziendaleTable.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InserimentoPersonaleAziendale.xaml.cs">
+    <Compile Include="InserimentoPersonaleAziendale.cs">
       <DependentUpon>InserimentoPersonaleAziendale.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PersonaleAziendale.xaml.cs">
-      <DependentUpon>PersonaleAziendale.xaml</DependentUpon>
+    <Compile Include="PersonaleAziendaleTable.xaml.cs">
+      <DependentUpon>PersonaleAziendaleTable.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

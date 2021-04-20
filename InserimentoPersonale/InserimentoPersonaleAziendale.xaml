@@ -1,4 +1,4 @@
-﻿<Page x:Class="InserimentoPersonale.Page1"
+﻿<Window x:Class="InserimentoPersonale.InserimentoPersonaleAziendale"
 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -37,11 +37,11 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
             <Label Content="Riepilogo" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" FontSize="18" Width="130" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             <ListBox x:Name="lbRiepilogo"  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" FontSize="18" Width="530" Height="110" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
-            <Button x:Name="btnNuovoInserimento" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Content="Nuovo Inserimento" FontSize="18" Width="170" HorizontalAlignment="Center"/>
+            <Button x:Name="btnNuovoInserimento" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Content="Nuovo Inserimento" FontSize="18" Width="170" HorizontalAlignment="Center" Click="btnNuovoInserimento_Click"/>
             <Button x:Name="btnMostraFile"  Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Content="Mostra File" FontSize="18" Width="170" HorizontalAlignment="Center"/>
             
 
         </Grid>
     </StackPanel>
     
-</Page>
+</Window>
