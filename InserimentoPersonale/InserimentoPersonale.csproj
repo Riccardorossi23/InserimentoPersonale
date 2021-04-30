@@ -63,7 +63,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Constanti.cs" />
+    <Compile Include="Costanti.cs" />
     <Compile Include="Personale.cs">
       <DependentUpon>Personale.xaml</DependentUpon>
       <SubType>Code</SubType>

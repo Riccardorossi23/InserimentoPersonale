@@ -1,6 +1,7 @@
 ﻿using ClassPersonale;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,6 +50,14 @@ namespace InserimentoPersonale
                     pa.Qualifica = cmbQualifica.SelectedItem.ToString();
                     pa.Area = txtArea.Text;
                     lbRiepilogo.Items.Add(pa.ToString());
+                    StreamWriter sw = new StreamWriter(Costanti.DIRECTORY + Costanti.FILE, true);
+                    string tabella = $"{pa.Codice_Fiscale};:{pa.Nome};{pa.Cognome};{pa.Tipologia};{pa.Qualifica};{pa.Area}";
+                    sw.WriteLine(tabella);
+                    sw.Flush();
+                    sw.Close();
+                    cmbQualifica.IsEnabled = false;
+                    txtArea.IsEnabled = false;
+                    lbRiepilogo.IsEnabled = false;
                 }
             }
             catch (Exception ex)
@@ -56,19 +65,28 @@ namespace InserimentoPersonale
                 MessageBox.Show(ex.Message, "", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
+
         }
 
         private void btnNuovoInserimento_Click(object sender, RoutedEventArgs e)
         {
-           
-            txtArea.Text = "";
-            cmbQualifica.SelectedIndex = -1;
-            this.Close();
+
+
+            if (lbRiepilogo.Items.Count == 0)
+            {
+                MessageBox.Show("Inserire qualifica e area per creare la persona aziendale!", "ERRORE", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            
+            else
+            {
+                this.Close();
+            }
+               
         }
 
         private void btnMostraFile_Click(object sender, RoutedEventArgs e)
         {
-
+            new PersonaleAziendaleTable().ShowDialog();
         }
     }
        

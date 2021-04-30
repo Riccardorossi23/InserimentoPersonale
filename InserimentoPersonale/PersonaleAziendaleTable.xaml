@@ -7,6 +7,7 @@
       mc:Ignorable="d" 
       Title="Database" Height="450" Width="800">
     <Grid>
+      
         <StackPanel Background="White"  HorizontalAlignment="Center" VerticalAlignment="Center">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -22,7 +23,13 @@
                     <RowDefinition Height="40"/>
                 </Grid.RowDefinitions>
                 <Label Content="Tabella Personale Aziendale" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Foreground="Red" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                <ListBox x:Name="lbMostra" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" FontSize="18" Height="235" Width="700" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <ListBox x:Name="lbMostra" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" FontSize="18" Height="235" Width="700" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="6"/>
+                        </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                </ListBox>
                 <Button x:Name="btnIndietro" Content="Indietro" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" FontSize="18" Width="150" HorizontalAlignment="Center"/>
                 <Button x:Name="btnEsci" Content="Esci" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" FontSize="18" Width="150" HorizontalAlignment="Center"/>
             </Grid>

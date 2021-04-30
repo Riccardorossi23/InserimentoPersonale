@@ -24,7 +24,6 @@
                 <RowDefinition Height="40"/>
             </Grid.RowDefinitions>
 
-
             <Label Content="Inserimento Personale" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Foreground="Red" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             
             <Label Content="Codice Fiscale:"  Grid.Row="1" Grid.Column="0" FontSize="18" Width="130" VerticalAlignment="Center" HorizontalAlignment="Right"/>

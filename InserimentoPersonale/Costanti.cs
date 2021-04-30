@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace InserimentoPersonale
 {
-    public class Constanti
+    public class Costanti
     {
         public static readonly string DIRECTORY = Directory.GetCurrentDirectory();
         public const string FILE = @"\personaleAziendale.csv";
-        private Constanti() { }
+        private Costanti() { }
+
     }
 }

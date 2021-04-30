@@ -19,6 +19,7 @@ namespace ClassPersonale
         }
         public override string ToString()
         {
+
             return $"{Nome} {Cognome}";
         }
     }

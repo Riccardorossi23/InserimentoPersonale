@@ -29,6 +29,7 @@ namespace InserimentoPersonale
             InitializeComponent();
             LeggiFile();
             txtCodFisc.Focus();
+
         }
 
         private void btnPulisci_Click(object sender, RoutedEventArgs e)
@@ -41,7 +42,7 @@ namespace InserimentoPersonale
         private void LeggiFile()
         {
             string line;
-            StreamReader streamLettura = new StreamReader(Constanti.DIRECTORY + Constanti.FILE);
+            StreamReader streamLettura = new StreamReader(Costanti.DIRECTORY + Costanti.FILE);
             do
             {
                 line = streamLettura.ReadLine();

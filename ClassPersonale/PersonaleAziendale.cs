@@ -18,6 +18,7 @@ namespace ClassPersonale
             public override string ToString()
             {
                 return base.ToString() + $",Tipologia:{Tipologia}, Mansione:{Qualifica}, Area:{Area}";
+
             }
         }
     

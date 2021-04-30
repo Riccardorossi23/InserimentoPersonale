@@ -23,16 +23,16 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                 <RowDefinition  Height="40"/>
                 <RowDefinition  Height="40"/>
             </Grid.RowDefinitions>
-
+            
                 <Label Content="Inserimento Personale Aziendale" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Foreground="Red" FontSize="24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
 
             <Label Content="Qualifica" Grid.Row="1" Grid.Column="0" FontSize="18" Width="130" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" HorizontalAlignment="Right"/>
-            <ComboBox Name="cmbQualifica" Grid.Row="1" Grid.Column="1" FontSize="18" Width="170" Height="34" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Loaded="cmbQualifica_Loaded"/>
+            <ComboBox IsEnabled="True" Name="cmbQualifica" Grid.Row="1" Grid.Column="1" FontSize="18" Width="170" Height="34" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Loaded="cmbQualifica_Loaded"/>
 
             <Label Content="Area" Grid.Row="2" Grid.Column="0" FontSize="18" Width="130" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" HorizontalAlignment="Right"/>
-            <TextBox Name="txtArea" Grid.Row="2" Grid.Column="1" FontSize="18" Width="170" Height="34" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left"/>
+            <TextBox IsEnabled="True" Name="txtArea" Grid.Row="2" Grid.Column="1" FontSize="18" Width="170" Height="34" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left"/>
 
-            <Button x:Name="btnInserisci"  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Content="Inserisci" FontSize="18" Width="170" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btnInserisci_Click"/>
+            <Button IsEnabled="True" x:Name="btnInserisci"  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Content="Inserisci" FontSize="18" Width="170" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btnInserisci_Click"/>
 
             <Label Content="Riepilogo" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" FontSize="18" Width="130" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             <ListBox x:Name="lbRiepilogo"  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" FontSize="18" Width="530" Height="110" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
